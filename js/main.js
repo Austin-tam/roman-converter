@@ -88,10 +88,14 @@ document.getElementById("btn-back").addEventListener("click", function() {
 
 document.getElementById("btn-enter").addEventListener("click", function() {
   let num = parseInt(document.getElementById("roman-input").value);
-  let answer = convertToRoman(num);
-
-  document.getElementById("roman-desc").innerText = "The Roman numeral equivalent of the decimal number " + num + " is:";
-  document.getElementById("roman-number").innerText = answer;
+  if (num >= 1 && num <= 3999) {
+    let answer = convertToRoman(num);
+    document.getElementById("roman-desc").innerText = "The Roman numeral equivalent of the decimal number " + num + " is:";
+    document.getElementById("roman-number").innerText = answer;
+  } else {
+    document.getElementById("roman-desc").innerText = "ERROR: The decimal number you selected is not within the range of 1-3999!";
+    document.getElementById("roman-number").innerText = "";
+  }
 });
 
 function convertToRoman(num) {
