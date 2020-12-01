@@ -115,6 +115,14 @@ document.getElementById("btn-enter").addEventListener("click", function() {
   }
 });
 
+//Event listener for when the enter key on the keyboard is pressed
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btn-enter").click();
+  }
+});
+
 //Recursive function that converts decimal numbers into it's Roman numeral equivalent.
 //@param {number} num
 //@return {string}
