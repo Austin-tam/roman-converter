@@ -85,3 +85,72 @@ document.getElementById("btn-clear").addEventListener("click", function() {
 document.getElementById("btn-back").addEventListener("click", function() {
   document.getElementById("roman-input").value = document.getElementById("roman-input").value.substring(0, document.getElementById("roman-input").value.length - 1);
 });
+
+document.getElementById("btn-enter").addEventListener("click", function() {
+  let num = parseInt(document.getElementById("roman-input").value);
+  let answer = convertToRoman(num);
+
+  document.getElementById("roman-desc").innerText = "The Roman numeral equivalent of the decimal number " + num + " is:";
+  document.getElementById("roman-number").innerText = answer;
+});
+
+function convertToRoman(num) {
+  if (num == 0) {
+      return "";
+  }
+
+  let ans = "";
+
+  switch (num.toString().length) {
+    case 4:
+      ans += "M";
+      num -= 1000;
+      return ans + convertToRoman(num)
+    case 3:
+      if (num >= 900) {
+        ans += "CM";
+        num -= 900;
+      } else if (num >= 500) {
+        ans += "D";
+        num -= 500;
+      } else if (num >= 400) {
+        ans += "CD";
+        num -= 400;
+      } else {
+        ans += "C";
+        num -= 100;
+      }
+
+      return ans + convertToRoman(num)
+    case 2:
+      if (num >= 90) {
+        ans += "XC";
+        num -= 90;
+      } else if (num >= 50) {
+        ans += "L";
+        num -= 50;
+      } else if (num >= 40) {
+        ans += "XL";
+        num -= 40;
+      } else {
+        ans += "X";
+        num -= 10;
+      }
+      return ans + convertToRoman(num)
+    case 1:
+      if (num == 9) {
+        ans += "IX";
+        num -= 9;
+      } else if (num >= 5) {
+        ans += "V"
+        num -= 5;
+      } else if (num == 4) {
+        ans += "IV";
+        num -= 4;
+      } else {
+        ans += "I";
+        num -= 1;
+      }
+      return ans + convertToRoman(num)
+  }
+}
