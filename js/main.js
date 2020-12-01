@@ -80,10 +80,14 @@ document.getElementById("btn-0").addEventListener("click", function() {
 
 document.getElementById("btn-clear").addEventListener("click", function() {
   document.getElementById("roman-input").value = "";
+  document.getElementById("roman-desc").innerText = "";
+  document.getElementById("roman-number").innerText = "";
 });
 
 document.getElementById("btn-back").addEventListener("click", function() {
   document.getElementById("roman-input").value = document.getElementById("roman-input").value.substring(0, document.getElementById("roman-input").value.length - 1);
+  document.getElementById("roman-desc").innerText = "";
+  document.getElementById("roman-number").innerText = "";
 });
 
 document.getElementById("btn-enter").addEventListener("click", function() {
