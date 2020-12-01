@@ -25,9 +25,87 @@
 
 <body>
   <main id="main">
-    <div class="h-100 w-100" style="background-color: #555555" id="main-div">
-      <div id="converter-div">
-        
+    <div class="d-flex flex-column align-items-center h-100 w-100" id="main-div">
+      <h1><u>Roman Converter</u></h1><br>
+
+      <h6 class="w-50 text-center">Use the buttons below, or your numpad, to enter a number to convert it to its roman numeral equivalent. Since the original usage of roman numerals only had a range from 1-3999, this converter will only accept numbers within that range.</h6><br>
+      <br><br><div class="w-25" style="background-color: #b3d4fc" id="converter-div">
+        <form>
+          <-- TODO: fix the structure for the 0 button and the backspace and enter buttons-->
+          <div class="form-group">
+            <input readonly class="w-100 form-control form-control-lg" type="number" id="roman-input" placeholder="0" name="roman-input" min="1" max="3999">
+          </div>
+
+          <div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="btn-toolbar">
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">1</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">2</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">3</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <button class="btn btn-lg btn-secondary col p-4">2</button>
+                </div>
+              </div>
+            </div>
+
+          </div><div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="btn-toolbar">
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">1</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">2</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">3</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <button class="btn btn-lg btn-secondary col p-4">2</button>
+                </div>
+              </div>
+            </div>
+
+          </div><div class="form-group">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="btn-toolbar">
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">1</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">2</button>
+                    <button class="btn btn-lg btn-secondary col-lg-3 p-4 mx-auto">3</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <button class="btn btn-lg btn-secondary col p-4">2</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--          <div class="form-group">-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">1</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">2</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">3</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-2 p-4">C</button>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">4</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">5</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">6</button>-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">7</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">8</button>-->
+<!--            <button class="btn btn-lg btn-secondary col-lg-3 p-4">9</button>-->
+<!--          </div>-->
+        </form>
       </div>
     </div>
   </main>
