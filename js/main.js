@@ -1,3 +1,4 @@
+//Event listener for when button "1" is clicked
 document.getElementById("btn-1").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "1";
@@ -6,6 +7,7 @@ document.getElementById("btn-1").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "2" is clicked
 document.getElementById("btn-2").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "2";
@@ -14,6 +16,7 @@ document.getElementById("btn-2").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "3" is clicked
 document.getElementById("btn-3").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "3";
@@ -22,6 +25,7 @@ document.getElementById("btn-3").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "4" is clicked
 document.getElementById("btn-4").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "4";
@@ -30,6 +34,7 @@ document.getElementById("btn-4").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "5" is clicked
 document.getElementById("btn-5").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "5";
@@ -38,6 +43,7 @@ document.getElementById("btn-5").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "6" is clicked
 document.getElementById("btn-6").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "6";
@@ -46,6 +52,7 @@ document.getElementById("btn-6").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "7" is clicked
 document.getElementById("btn-7").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "7";
@@ -54,6 +61,7 @@ document.getElementById("btn-7").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "8" is clicked
 document.getElementById("btn-8").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "8";
@@ -62,6 +70,7 @@ document.getElementById("btn-8").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "9" is clicked
 document.getElementById("btn-9").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
     document.getElementById("roman-input").value = "9";
@@ -70,6 +79,7 @@ document.getElementById("btn-9").addEventListener("click", function() {
   };
 });
 
+//Event listener for when button "0" is clicked
 document.getElementById("btn-0").addEventListener("click", function() {
   if (document.getElementById("roman-input").value === "") {
 
@@ -78,18 +88,21 @@ document.getElementById("btn-0").addEventListener("click", function() {
   };
 });
 
+//Event listener for when the clear button, "C", is clicked
 document.getElementById("btn-clear").addEventListener("click", function() {
   document.getElementById("roman-input").value = "";
   document.getElementById("roman-desc").innerText = "";
   document.getElementById("roman-number").innerText = "";
 });
 
+//Event listener for when the back button, "BACK", is clicked
 document.getElementById("btn-back").addEventListener("click", function() {
   document.getElementById("roman-input").value = document.getElementById("roman-input").value.substring(0, document.getElementById("roman-input").value.length - 1);
   document.getElementById("roman-desc").innerText = "";
   document.getElementById("roman-number").innerText = "";
 });
 
+//Event listener for when the enter button, "ENTER", is clicked
 document.getElementById("btn-enter").addEventListener("click", function() {
   let num = parseInt(document.getElementById("roman-input").value);
   if (num >= 1 && num <= 3999) {
@@ -102,6 +115,9 @@ document.getElementById("btn-enter").addEventListener("click", function() {
   }
 });
 
+//Recursive function that converts decimal numbers into it's Roman numeral equivalent.
+//@param {number} num
+//@return {string}
 function convertToRoman(num) {
   if (num == 0) {
       return "";
